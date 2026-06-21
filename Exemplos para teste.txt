@@ -1,0 +1,28 @@
+RESULTADO_VENDA
+
+FE01: MC09
+FE02: 81
+Armazem: Casal da Areia
+Dias_desde_ultima_venda: 35
+Qt_vendida: 235
+Qt_media: 185
+Qt_Produzida: 0
+Dias_desde_ultima_producao: 0
+Qt_commprada:0
+Dias_desde_ultima_compra: 0
+Cluster do Produto: 1
+
+
+RESULTADO_Não_Venda
+
+FE01: PA06
+FE02: 7
+Armazem: Frazão
+Dias_desde_ultima_venda: 78
+Qt_vendida: 23
+Qt_media: 20.3
+Qt_Produzida: 4200
+Dias_desde_ultima_producao: 78
+Qt_commprada:0
+Dias_desde_ultima_compra: 0
+Cluster do Produto: 1
