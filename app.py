@@ -36,18 +36,7 @@ def carregar_modelo(caminho_modelo: str):
 
 
 def preparar_dados_para_previsao_manual(df: pd.DataFrame, modelo_export: dict) -> pd.DataFrame:
-    """
-    Prepara uma linha manual para o modelo.
-
-    Correção principal:
-    - Não usamos pd.get_dummies(drop_first=True) numa única linha.
-    - Criamos diretamente todas as colunas finais do treino com 0.
-    - Preenchemos as colunas numéricas.
-    - Para cada categórica, ativamos manualmente a dummy correta, se existir.
-
-    Isto replica o resultado final que o modelo viu no treino.
-    """
-
+  
     df = df.copy()
 
     feature_columns = modelo_export["feature_columns"]
@@ -98,10 +87,7 @@ def preparar_dados_para_previsao_manual(df: pd.DataFrame, modelo_export: dict) -
         if col in X_final.columns:
             X_final[col] = pd.to_numeric(df_features[col], errors="coerce").fillna(0)
 
-    # 2) Codificar categóricas manualmente
-    # No treino foi usado pd.get_dummies(..., drop_first=True).
-    # Portanto, se a dummy não existir, significa que a categoria é provavelmente
-    # a categoria base/dropada, ficando tudo a 0 para essa variável.
+ 
     for col in colunas_categoricas:
         if col not in df_features.columns:
             continue
