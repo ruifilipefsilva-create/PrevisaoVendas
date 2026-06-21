@@ -114,7 +114,8 @@ def converter_para_numero(valor):
 # INTERFACE
 # ============================================================
 
-st.title("🌲 Previsão Vendas com o Random Forest Classifier")
+st.title("🌲 Previsão Vendas")
+st.write("2025106369 - Breatriz Vouga || 2010101488 - Rui Silva")
 st.write("Preencha os campos abaixo para gerar uma previsão pontual.")
 
 CAMINHO_MODELO = "modelo_rfc.joblib"
