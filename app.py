@@ -24,7 +24,7 @@ import streamlit as st
 
 
 st.set_page_config(
-    page_title="Previsão RFC",
+    page_title="Previsão Vendas RFC",
     page_icon="🌲",
     layout="centered"
 )
@@ -128,8 +128,8 @@ def converter_para_numero(valor):
 # INTERFACE
 # ============================================================
 
-st.title("🌲 Previsão pontual com Random Forest Classifier")
-st.write("Preenche os campos abaixo para gerar uma previsão pontual com o modelo RFC.")
+st.title("🌲 Previsão Vendas com o Random Forest Classifier")
+st.write("Preencha os campos abaixo para gerar uma previsão pontual.")
 
 CAMINHO_MODELO = "modelo_rfc.joblib"
 
